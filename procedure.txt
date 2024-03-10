@@ -3,4 +3,4 @@
 - connect newly created app in settings. 
 - make global template and connect in settings dirs.
 - make base.html and home.html and add bootstrap inherit base.html to home.html 
-- 
+- create category model and add crispy... ! 

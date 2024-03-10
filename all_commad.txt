@@ -1,4 +1,13 @@
 - django-admin startproject _nm_
 - django-admin startapp _nm_ 
 - py manage.py runserver
-- 
+- pip install crispy-bootstrap5
+- py manage.py makemigrations 
+- py manage.py migrate
+- py manage.py createsuperuser
+
+- Username (leave blank to use 'vivobook'): task_management
+- Email address: task_management@gmail.com
+- Password: 
+- Password (again):
+
