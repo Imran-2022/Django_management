@@ -24,7 +24,8 @@
                             <a  href="{% url 'edit_task' task.id %}"><button class="btn btn-danger btn-sm" style="padding: 0.25rem 0.5rem; font-size: 0.7rem;">Edit</button></a>
                             <a  href="{% url 'delete_task' task.id %}"><button class="btn btn-danger btn-sm" style="padding: 0.25rem 0.5rem; font-size: 0.7rem;">Delete</button></a>
                         </div> 
-
+                        {% else %}
+                        <button class="btn btn-outline-primary btn-sm disabled" style="padding: 0.25rem 0.5rem; font-size: 0.7rem;">Task Completed</button>
                         {% endif %}
                     
                     </div>
