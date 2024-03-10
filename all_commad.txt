@@ -1,0 +1,4 @@
+- django-admin startproject _nm_
+- django-admin startapp _nm_ 
+- py manage.py runserver
+- 
