@@ -2,6 +2,32 @@
 
 {% block content %}
 
-<h1>Welcome to my world !!</h1>
+<div class="container">
+    <div class="row">
+        {% for task in data %}
+            <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ task.task_title }}</h5>
+                        <p class="card-text">{{ task.task_description }}</p>
+                        <p>task_is_complete : {{task.task_is_complete}}</p>
+                        <small>Assign_date :  {{task.task_assign_date}}</small>
+                        <ul class="list-unstyled d-flex gap-2 flex-wrap">
+                            <strong>Category:</strong>
+                            {% for category in task.task_category.all %}
+                                <button class="btn btn-outline-primary btn-sm disabled" style="padding: 0.25rem 0.5rem; font-size: 0.7rem;">{{ category.name }}</button>
+                            {% endfor %}
+                        </ul> 
+                        {% comment %} <div class="d-flex gap-2">
+                            <a href="{% url 'edit_task' task.id %}"><button class="btn btn-danger btn-sm " style="padding: 0.25rem 0.5rem; font-size: 0.7rem;">Edit</button></a>
+                            <a href="{% url 'delete_task' task.id %}"><button class="btn btn-danger btn-sm " style="padding: 0.25rem 0.5rem; font-size: 0.7rem;">Delete</button></a>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}
